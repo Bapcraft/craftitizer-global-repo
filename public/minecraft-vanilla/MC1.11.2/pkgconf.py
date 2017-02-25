@@ -5,12 +5,9 @@ version = "1.11.2"
 destination = "server.jar"
 
 def __url():
-	global urltemplate
-	global version
 	return urltemplate.format(version)
 
 def install(ctx):
-	global destination
 	ctx.download_url(__url(), destination)
 
 def configure(ctx):
